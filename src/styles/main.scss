@@ -48,3 +48,6 @@ nav:hover img {
 .nav-links div:hover {
   box-shadow: 0.35rem 0.35rem $colorRadiant;
 }
+.component-nav:hover + .nav-links div:hover {
+  box-shadow: 0.35rem 0.35rem $colorDark;
+}
