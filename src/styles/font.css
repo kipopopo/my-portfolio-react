@@ -1,0 +1,30 @@
+@font-face {
+    font-family: Roobert;
+    src: url(./fonts/Roobert-Light.otf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: Roobert;
+    src: url(./fonts/Roobert-Regular.otf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: Roobert;
+    src: url(./fonts/Roobert-Medium.otf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: Roobert;
+    src: url(./fonts/Roobert-SemiBold.otf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: Roobert;
+    src: url(./fonts/Roobert-Bold.otf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Roobert;
+    src: url(./fonts/Roobert-Heavy.otf);
+    font-weight: 900;
+}
