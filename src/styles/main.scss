@@ -1,28 +1,35 @@
 $colorDark: #111111;
+$colorLight: whitesmoke;
 $colorRadiant: yellow;
 
-.component-nav:hover + div {
-  color: $colorDark;
-  background: whitesmoke;
-}
+// .component-nav:hover + div {
+//   color: $colorDark;
+//   background: whitesmoke;
+// }
 nav {
   display: flex;
   width: 100%;
   min-height: 10vh;
-  color: whitesmoke;
+  color: $colorLight;
   background-color: $colorDark;
   justify-content: space-around;
   align-items: center;
   position: relative;
+  transition: 0.3s;
+  box-shadow: 0 0.25rem $colorLight;
   z-index: 0;
 }
 nav:hover {
   color: $colorDark;
   background-color: $colorRadiant;
-  box-shadow: 0 0.35rem $colorDark;
+  box-shadow: 0 0.5rem $colorLight;
 }
 nav:hover img {
-  opacity: 0.7;
+  transition: 0.2s;
+}
+nav:hover img {
+  transition-delay: 0.3s;
+  box-shadow: 0.35rem 0.35rem $colorDark;
 }
 .logo-img img {
   height: 8vh;
@@ -47,4 +54,41 @@ nav:hover img {
 }
 .nav-links div:hover {
   box-shadow: 0.35rem 0.35rem $colorDark;
+}
+.main-container {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  transition: 0.3s;
+}
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ld-mode {
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  position: fixed;
+  right: 0px;
+  margin: 10px;
+  padding: 5px 0;
+}
+.ld-mode .icon {
+  margin: 0 auto;
+  width: 2rem;
+}
+.ld-mode .text {
+  font-size: 12px;
+  font-weight: 100;
+  background-color: $colorDark;
+  border-radius: 9px;
+  padding: 2px 5px;
+}
+.ld-mode:hover {
+  color: $colorDark;
+}
+.ld-mode:hover .text {
+  background-color: $colorLight;
 }
