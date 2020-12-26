@@ -31,8 +31,12 @@ function App() {
     }
   };
 
+  let styles = {
+    backgroundColor: bgColor,
+  };
+
   return (
-    <div className="App">
+    <div className="App" style={styles}>
       <Nav
         toggleNav={toggleNav}
         togglePosition={togglePosition}
