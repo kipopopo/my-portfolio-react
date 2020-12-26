@@ -27,7 +27,11 @@ function MainContent(props) {
 
   return (
     <div className="main-outer-container">
-      <BgShapes color={props.bgColor} bgColor={props.color} />
+      <BgShapes
+        color={props.bgColor}
+        bgColor={props.color}
+        togglePosition={props.togglePosition}
+      />
       <div className="main-container" style={styleToggleDark}>
         <div className="main-content">
           <Intro color={props.bgColor} />

@@ -8,7 +8,7 @@ $colorRadiant: yellow;
 }
 .component-nav {
   position: relative;
-  z-index: 1;
+  z-index: 15;
   transition: 0.3s;
 }
 nav {
@@ -185,7 +185,7 @@ nav:hover .nav-toggle {
   height: 200px;
   left: 0vw;
   bottom: 0vh;
-  transition: border-radius 0.75s;
+  transition: border-radius 0.75s, background-color 0.3s;
   animation: updown 3s infinite ease-in-out;
 }
 .bgshape-bigcircle-1 {
@@ -194,13 +194,13 @@ nav:hover .nav-toggle {
   height: 650px;
   left: 16.5vw;
   top: 24vh;
-  transition: border-radius 1s;
+  transition: border-radius 1s, transform 0.3s, background-color 0.3s;
 }
 .control-bigcrcle-1 {
   clip-path: circle(50%);
   width: 650px;
   height: 650px;
-  margin-top: 14vh;
+  top: 24vh;
   margin-left: 16.5vw;
   z-index: 11;
 }
