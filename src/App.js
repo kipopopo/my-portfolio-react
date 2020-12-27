@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Nav from "./components/Nav";
 import MainContent from "./components/MainContent";
+import bgCircleVideo from "./assets/bg-circle-video.mp4";
 
 import "./styles/main.scss";
 import "./styles/font.css";
@@ -35,8 +36,22 @@ function App() {
     backgroundColor: bgColor,
   };
 
+  let styleVideoInvert;
+  if (!toggleDark) {
+    styleVideoInvert = { filter: "invert(100%)" };
+  } else {
+    styleVideoInvert = { filter: "invert(0%)" };
+  }
+
   return (
     <div className="App" style={styles}>
+      <video
+        src={bgCircleVideo}
+        muted
+        autoPlay
+        loop
+        style={styleVideoInvert}
+      ></video>
       <Nav
         toggleNav={toggleNav}
         togglePosition={togglePosition}
