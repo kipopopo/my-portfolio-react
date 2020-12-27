@@ -9,6 +9,9 @@ function BgShapes(props) {
   let styleColors = {
     color: props.color,
     backgroundColor: props.bgColor,
+    "&:hover": {
+      backgroundColor: props.color,
+    },
   };
   let styleColorsTogglePos = {
     color: props.color,

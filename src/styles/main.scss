@@ -45,7 +45,8 @@ nav:hover img {
   padding-top: 5px;
   margin-left: 1.5vw;
   width: 2vw;
-  height: 2.5vh;
+  height: 3.5vh;
+  fill: $colorLight;
   background-color: $colorDark;
   align-items: center;
   justify-content: center;
@@ -56,7 +57,9 @@ nav:hover img {
 }
 nav:hover .nav-toggle {
   background-color: $colorRadiant;
-  color: $colorDark;
+  .arrow {
+    fill: $colorDark;
+  }
 }
 .logo-img img {
   height: 8vh;
@@ -188,7 +191,7 @@ nav:hover .nav-toggle {
   height: 200px;
   left: 0vw;
   bottom: 0vh;
-  transition: border-radius 0.75s, background-color 0.3s;
+  transition: border-radius 0.75s, background-color 0.3s, filter 0.5s;
   animation: updown 3s infinite ease-in-out;
 }
 .bgshape-big {
@@ -196,7 +199,8 @@ nav:hover .nav-toggle {
   height: 650px;
   left: 16.5vw;
   top: 24vh;
-  transition: border-radius 1s, background-color 0.3s, transform 0.2s;
+  transition: border-radius 1s, box-shadow 1s, background-color 0.3s,
+    transform 0.2s;
 }
 .bgshape-backbig {
   width: 300px;
@@ -205,7 +209,7 @@ nav:hover .nav-toggle {
   left: 11vw;
   background-color: yellow;
   opacity: 0.6;
-  transition: border-radius 1s;
+  transition: border-radius 1s, box-shadow 1s, filter 0.5s;
   animation: updown 3s infinite ease-in-out;
   z-index: 8;
 }
@@ -217,14 +221,11 @@ nav:hover .nav-toggle {
   margin-left: 16.5vw;
   z-index: 11;
 }
-.control-bigcircle-1:hover {
-  clip-path: none;
-}
-.control-bigcrcle-1:hover + .bgshape-big {
-  border-radius: 0%;
-  & ~ .bgshape-backbig,
+.control-bigcircle-1:hover + .bgshape-big {
+  box-shadow: 0 0 45px;
+  ~ .bgshape-backbig,
   ~ .bgshape-halfcircle-1 {
-    border-radius: 0%;
+    filter: blur(15px);
   }
 }
 

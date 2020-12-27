@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/main.scss";
 import Logo from "../logo.png";
+import { ReactComponent as Arrow } from "../assets/icons/arrow-cone.svg";
 
 const menuItems = [{ name: "About" }, { name: "Contact" }];
 
@@ -13,6 +14,15 @@ function Nav(props) {
   let styleNav = {
     boxShadow: boxShadow,
   };
+  let rotateArrow;
+  if (!props.toggleNav) {
+    rotateArrow = `rotate(180deg)`;
+  } else {
+    rotateArrow = `rotate(0deg)`;
+  }
+  let styleArrow = {
+    transform: rotateArrow,
+  };
 
   return (
     <div className="component-nav" style={style}>
@@ -22,7 +32,7 @@ function Nav(props) {
           onClick={props.handleToggle}
           style={styleNav}
         >
-          <span>^</span>
+          <Arrow height="1rem" className="arrow" style={styleArrow} />
         </div>
         <div className="logo-img">
           <img src={Logo} alt="logo" />
