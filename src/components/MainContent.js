@@ -34,7 +34,11 @@ function MainContent(props) {
       />
       <div className="main-container" style={styleToggleDark}>
         <div className="main-content">
-          <Intro color={props.bgColor} />
+          <Intro
+            color={props.bgColor}
+            bgColor={props.color}
+            toggleDark={props.toggleDark}
+          />
         </div>
         <button className="ld-mode btn-pointer" onClick={props.handleToggle}>
           <div className="icon">

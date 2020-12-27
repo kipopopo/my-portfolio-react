@@ -1,7 +1,20 @@
 import React from "react";
+import Radium from "radium";
 import "../styles/main.scss";
+import "./introTitle.scss";
 
 function Intro(props) {
+  let styleBtnIntro = {
+    color: props.bgColor,
+    borderColor: props.bgColor,
+    ":hover": {
+      color: "#ffff00",
+      borderColor: "#ffff00",
+      backgroundColor: "#111111",
+      boxShadow: `0.35rem 0.35rem ${props.bgColor}`,
+    },
+  };
+
   let styles = {
     color: props.color,
   };
@@ -12,21 +25,29 @@ function Intro(props) {
         <div className="outer-intro-text">
           <div className="intro-text" style={styles}>
             <div>
-              <h2 className="title">Lorem ipsum title</h2>
+              <h2 className="title">
+                <span></span>
+              </h2>
               <p className="description">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos
-                excepturi eveniet assumenda aut error quo fugit. Porro quo ullam
-                ratione? Id cum quidem, necessitatibus illum aliquid quod rem
-                nisi odit?
+                Self-taught front-end web developer. <br />
+                <b>"Soon-to-be"</b> expert in React.js and a lot more to come.
               </p>
             </div>
           </div>
         </div>
         <div className="intro-image">
-          <p>Image presentation here</p>
+          <div className="outer-btn">
+            <div className="bfr-btn-title">
+              <h2>See what I've made</h2>
+            </div>
+            <div className="btn">
+              <button style={styleBtnIntro}>Click me!</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 }
-export default Intro;
+const StyledIntro = Radium(Intro);
+export default StyledIntro;

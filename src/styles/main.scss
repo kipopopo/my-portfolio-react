@@ -1,6 +1,13 @@
 $colorDark: #111111;
-$colorLight: whitesmoke;
-$colorRadiant: yellow;
+$colorDarkTrans: #11111150;
+$colorLight: #f5f5f5;
+$colorLightTrans: #f5f5f550;
+$colorRadiant: #ffff00;
+$colorRadiantTrans: #ffff0050;
+
+button {
+  font-family: Roobert;
+}
 
 video {
   object-fit: cover;
@@ -154,16 +161,17 @@ nav:hover .nav-toggle {
 .main-content .intro-text .title {
   font-size: 3rem;
   margin-bottom: 3vh;
+  height: 60px;
 }
 .main-content .intro-text .description {
-  line-height: 1.4rem;
+  line-height: 1.75rem;
   font-size: 1.15rem;
 }
 .outer-intro-text {
   width: 650px;
   height: 650px;
   margin-top: 9vh;
-  margin-left: 11.5vw;
+  margin-left: 10.5vw;
   display: flex;
 }
 .intro-text {
@@ -174,10 +182,47 @@ nav:hover .nav-toggle {
   z-index: 6;
 }
 .intro-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+
+  .outer-btn {
+    margin: auto;
+    padding-bottom: 10px;
+  }
+
+  .bfr-btn-title {
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    margin-top: 10px;
+
+    button {
+      font-size: 1rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      border: none;
+      padding: 10px 20px;
+      background-color: $colorDarkTrans;
+      transition: 0.3s;
+      border: 3px solid;
+      border-radius: 10px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .btn,
+  .bfr-btn-title {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
 }
+
 .grid-2c {
   height: 80vh;
   display: grid;
@@ -208,7 +253,7 @@ nav:hover .nav-toggle {
 .bgshape-big {
   width: 650px;
   height: 650px;
-  left: 16.5vw;
+  left: 15.5vw;
   top: 24vh;
   transition: border-radius 1s, box-shadow 1s, background-color 0.3s,
     transform 0.2s;
@@ -229,7 +274,7 @@ nav:hover .nav-toggle {
   width: 650px;
   height: 650px;
   top: 24vh;
-  margin-left: 16.5vw;
+  margin-left: 15.5vw;
   z-index: 11;
 }
 .control-bigcircle-1:hover + .bgshape-big {

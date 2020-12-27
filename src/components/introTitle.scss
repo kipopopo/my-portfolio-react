@@ -1,0 +1,123 @@
+.intro-text .title > span:after {
+  content: "";
+  animation: abomination1 7.5s linear 1;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes abomination1 {
+  0% {
+    content: "I";
+  }
+  4% {
+    content: "I'";
+  }
+  6% {
+    content: "I'm";
+  }
+  10% {
+    content: "I'm D";
+  }
+  12% {
+    content: "I'm Da";
+  }
+  14% {
+    content: "I'm Dax";
+  }
+  16% {
+    content: "I'm Daxx";
+  }
+  23% {
+    content: "I'm Dax";
+  }
+  24% {
+    content: "I'm Da";
+  }
+  25% {
+    content: "I'm D";
+  }
+  26% {
+    content: "I'm ";
+  }
+  28% {
+    content: "I'm K";
+  }
+  30% {
+    content: "I'm Ki";
+  }
+  32% {
+    content: "I'm Kip";
+  }
+  34% {
+    content: "I'm Kipo";
+  }
+  36% {
+    content: "I'm Kipop";
+  }
+  38% {
+    content: "I'm Kipopo";
+  }
+  40% {
+    content: "I'm Kipopop";
+  }
+  42% {
+    content: "I'm Kipopopp";
+  }
+  44% {
+    content: "I'm Kipopoppo";
+  }
+  45% {
+    content: "I'm Kipopopp";
+  }
+  46% {
+    content: "I'm Kipopop";
+  }
+  52% {
+    content: "I'm Kipopopo";
+  }
+  53% {
+    content: "I'm Kipopop";
+  }
+  54% {
+    content: "I'm Kipopo";
+  }
+  55% {
+    content: "I'm Kipop";
+  }
+  56% {
+    content: "I'm Kipo";
+  }
+  57% {
+    content: "I'm Kip";
+  }
+  58% {
+    content: "I'm Ki";
+  }
+  59% {
+    content: "I'm K";
+  }
+  60% {
+    content: "I'm ";
+  }
+  62% {
+    content: "I'm T";
+  }
+  64% {
+    content: "I'm Th";
+  }
+  66% {
+    content: "I'm Tha";
+  }
+  68% {
+    content: "I'm Thaq";
+  }
+  70% {
+    content: "I'm Thaqi";
+  }
+  72% {
+    content: "I'm Thaqif";
+  }
+  100% {
+    content: "I'm Thaqif.";
+  }
+}
