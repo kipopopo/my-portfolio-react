@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/my-portfolio-react/static/css/main.b9440b83.chunk.css",
-    "main.js": "/my-portfolio-react/static/js/main.b191362f.chunk.js",
-    "main.js.map": "/my-portfolio-react/static/js/main.b191362f.chunk.js.map",
+    "main.css": "/my-portfolio-react/static/css/main.d8b03a22.chunk.css",
+    "main.js": "/my-portfolio-react/static/js/main.6295532d.chunk.js",
+    "main.js.map": "/my-portfolio-react/static/js/main.6295532d.chunk.js.map",
     "runtime-main.js": "/my-portfolio-react/static/js/runtime-main.688ba793.js",
     "runtime-main.js.map": "/my-portfolio-react/static/js/runtime-main.688ba793.js.map",
     "static/js/2.edecf92e.chunk.js": "/my-portfolio-react/static/js/2.edecf92e.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.787b3d39.chunk.js": "/my-portfolio-react/static/js/3.787b3d39.chunk.js",
     "static/js/3.787b3d39.chunk.js.map": "/my-portfolio-react/static/js/3.787b3d39.chunk.js.map",
     "index.html": "/my-portfolio-react/index.html",
-    "static/css/main.b9440b83.chunk.css.map": "/my-portfolio-react/static/css/main.b9440b83.chunk.css.map",
+    "static/css/main.d8b03a22.chunk.css.map": "/my-portfolio-react/static/css/main.d8b03a22.chunk.css.map",
     "static/js/2.edecf92e.chunk.js.LICENSE.txt": "/my-portfolio-react/static/js/2.edecf92e.chunk.js.LICENSE.txt",
     "static/media/font.css": "/my-portfolio-react/static/media/Roobert-SemiBold.aabbb49d.otf",
     "static/media/dark-mode.31129325.svg": "/my-portfolio-react/static/media/dark-mode.31129325.svg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.688ba793.js",
     "static/js/2.edecf92e.chunk.js",
-    "static/css/main.b9440b83.chunk.css",
-    "static/js/main.b191362f.chunk.js"
+    "static/css/main.d8b03a22.chunk.css",
+    "static/js/main.6295532d.chunk.js"
   ]
 }
