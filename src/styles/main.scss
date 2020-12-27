@@ -177,7 +177,10 @@ nav:hover .nav-toggle {
 .bg {
   position: absolute;
   transition: background-color 0.3s;
-  z-index: 5;
+  z-index: 9;
+}
+.circle {
+  border-radius: 50%;
 }
 .bgshape-halfcircle-1 {
   border-radius: 0 100% 0 0;
@@ -188,15 +191,25 @@ nav:hover .nav-toggle {
   transition: border-radius 0.75s, background-color 0.3s;
   animation: updown 3s infinite ease-in-out;
 }
-.bgshape-bigcircle-1 {
-  border-radius: 50%;
+.bgshape-big {
   width: 650px;
   height: 650px;
   left: 16.5vw;
   top: 24vh;
-  transition: border-radius 1s, transform 0.3s, background-color 0.3s;
+  transition: border-radius 1s, background-color 0.3s, transform 0.2s;
 }
-.control-bigcrcle-1 {
+.bgshape-backbig {
+  width: 300px;
+  height: 300px;
+  top: 15vh;
+  left: 11vw;
+  background-color: yellow;
+  opacity: 0.6;
+  transition: border-radius 1s;
+  animation: updown 3s infinite ease-in-out;
+  z-index: 8;
+}
+.control-bigcircle-1 {
   clip-path: circle(50%);
   width: 650px;
   height: 650px;
@@ -204,13 +217,13 @@ nav:hover .nav-toggle {
   margin-left: 16.5vw;
   z-index: 11;
 }
-.control-bigcrcle-1:hover {
+.control-bigcircle-1:hover {
   clip-path: none;
 }
-.control-bigcrcle-1:hover + .bgshape-bigcircle-1 {
+.control-bigcrcle-1:hover + .bgshape-big {
   border-radius: 0%;
-
-  & + .bgshape-halfcircle-1 {
+  & ~ .bgshape-backbig,
+  ~ .bgshape-halfcircle-1 {
     border-radius: 0%;
   }
 }

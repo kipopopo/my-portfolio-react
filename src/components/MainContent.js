@@ -26,7 +26,7 @@ function MainContent(props) {
   };
 
   return (
-    <div className="main-outer-container">
+    <div className="main-outer-container perspective-container">
       <BgShapes
         color={props.bgColor}
         bgColor={props.color}
