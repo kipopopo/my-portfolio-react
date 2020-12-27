@@ -10,7 +10,6 @@ video {
   top: 0;
   left: 0;
   opacity: 0.25;
-  filter: grayscale(100%);
 }
 .App {
   height: 100vh;
@@ -30,6 +29,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   position: relative;
+  opacity: 0.8;
   transition: 0.3s;
   box-shadow: 0 0.25rem $colorLight;
   z-index: 0;
@@ -38,6 +38,7 @@ nav:hover {
   color: $colorDark;
   background-color: $colorRadiant;
   box-shadow: 0 0.5rem $colorLight;
+  opacity: 1;
 }
 nav:hover img {
   transition: 0.2s;

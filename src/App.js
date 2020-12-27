@@ -38,9 +38,9 @@ function App() {
 
   let styleVideoInvert;
   if (!toggleDark) {
-    styleVideoInvert = { filter: "invert(100%)" };
+    styleVideoInvert = { filter: "grayscale(1) invert(1)" };
   } else {
-    styleVideoInvert = { filter: "invert(0%)" };
+    styleVideoInvert = { filter: "grayscale(1) invert(0)" };
   }
 
   return (
