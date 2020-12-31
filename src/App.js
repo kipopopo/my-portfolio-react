@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Nav from "./components/Nav";
 import MainContent from "./components/MainContent";
 import bgCircleVideo from "./assets/bg-circle-video.mp4";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import "./styles/main.scss";
 import "./styles/font.css";
@@ -44,29 +45,31 @@ function App() {
   }
 
   return (
-    <div className="App" style={styles}>
-      <video
-        src={bgCircleVideo}
-        muted
-        autoPlay
-        loop
-        style={styleVideoInvert}
-      ></video>
-      <Nav
-        toggleNav={toggleNav}
-        togglePosition={togglePosition}
-        handleToggle={handleToggle}
-        color={color}
-      />
-      <MainContent
-        toggleNav={toggleNav}
-        togglePosition={togglePosition}
-        handleToggle={handleToggleMainContent}
-        toggleDark={toggleDark}
-        color={color}
-        bgColor={bgColor}
-      />
-    </div>
+    <Router basename="/my-portfolio-react/">
+      <div className="App" style={styles}>
+        <video
+          src={bgCircleVideo}
+          muted
+          autoPlay
+          loop
+          style={styleVideoInvert}
+        ></video>
+        <Nav
+          toggleNav={toggleNav}
+          togglePosition={togglePosition}
+          handleToggle={handleToggle}
+          color={color}
+        />
+        <MainContent
+          toggleNav={toggleNav}
+          togglePosition={togglePosition}
+          handleToggle={handleToggleMainContent}
+          toggleDark={toggleDark}
+          color={color}
+          bgColor={bgColor}
+        />
+      </div>
+    </Router>
   );
 }
 

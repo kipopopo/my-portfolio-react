@@ -2,8 +2,10 @@ import React from "react";
 import "../styles/main.scss";
 import BgShapes from "./BgShapes";
 import Intro from "./Intro";
+import Projects from "./Projects";
 import { ReactComponent as LightIcon } from "../assets/icons/light-mode.svg";
 import { ReactComponent as DarkIcon } from "../assets/icons/dark-mode.svg";
+import { Switch, Route } from "react-router-dom";
 
 function MainContent(props) {
   let height;
@@ -34,11 +36,18 @@ function MainContent(props) {
       />
       <div className="main-container" style={styleToggleDark}>
         <div className="main-content">
-          <Intro
-            color={props.bgColor}
-            bgColor={props.color}
-            toggleDark={props.toggleDark}
-          />
+          <Switch>
+            <Route path="/" exact>
+              <Intro
+                color={props.bgColor}
+                bgColor={props.color}
+                toggleDark={props.toggleDark}
+              />
+            </Route>
+            <Route path="/projects">
+              <Projects />
+            </Route>
+          </Switch>
         </div>
         <button className="ld-mode btn-pointer" onClick={props.handleToggle}>
           <div className="icon">

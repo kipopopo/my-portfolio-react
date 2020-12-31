@@ -2,8 +2,13 @@ import React from "react";
 import Radium from "radium";
 import "../styles/main.scss";
 import "./introTitle.scss";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { introToggle } from "../actions";
 
 function Intro(props) {
+  const dispatch = useDispatch();
+
   let styleBtnIntro = {
     color: props.bgColor,
     borderColor: props.bgColor,
@@ -26,7 +31,7 @@ function Intro(props) {
           <div className="intro-text" style={styles}>
             <div>
               <h2 className="title">
-                <span></span>
+                I'm <span></span>
               </h2>
               <p className="description">
                 Self-taught front-end web developer. <br />
@@ -41,7 +46,15 @@ function Intro(props) {
               <h2>See what I've made</h2>
             </div>
             <div className="btn">
-              <button style={styleBtnIntro}>Click me!</button>
+              <Link to="/projects">
+                <button
+                  className="btn-pointer"
+                  style={styleBtnIntro}
+                  onClick={() => dispatch(introToggle())}
+                >
+                  Click me!
+                </button>
+              </Link>
             </div>
           </div>
         </div>

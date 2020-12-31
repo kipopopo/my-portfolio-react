@@ -1,7 +1,9 @@
 import React from "react";
 import "../styles/main.scss";
+import { useSelector } from "react-redux";
 
 function BgShapes(props) {
+  const isIntro = useSelector((state) => state.isIntro);
   let translate = `translate(0, ${props.togglePosition})`;
   let styleTogglePos = {
     transform: translate,
@@ -30,6 +32,7 @@ function BgShapes(props) {
       .getElementById("sheen")
       .style.setProperty("--sheenY", `${yOffset}px`);
   };
+
   const handleMouseMove = (event) => {
     const height = window.innerHeight;
     const width = window.innerWidth;
@@ -45,7 +48,7 @@ function BgShapes(props) {
   document.onmousemove = handleMouseMove;
 
   return (
-    <div className="bgshapes">
+    <div className={isIntro ? "bgshapes" : "bgshapes hidden"}>
       <div className="bg control-bigcircle-1" style={styleTogglePos}></div>
       <div
         id="sheen"

@@ -46,6 +46,9 @@ nav:hover {
   background-color: $colorRadiant;
   box-shadow: 0 0.5rem $colorLight;
   opacity: 1;
+  a {
+    color: $colorDark;
+  }
 }
 nav:hover img {
   transition: 0.2s;
@@ -92,6 +95,11 @@ nav:hover .nav-toggle {
 .nav-links {
   position: relative;
   z-index: 5;
+  a {
+    font-size: 1.25rem;
+    color: $colorLight;
+    text-decoration: none;
+  }
 }
 .nav-links div {
   font-weight: bold;
@@ -161,7 +169,6 @@ nav:hover .nav-toggle {
 .main-content .intro-text .title {
   font-size: 3rem;
   margin-bottom: 3vh;
-  height: 60px;
 }
 .main-content .intro-text .description {
   line-height: 1.75rem;
@@ -278,11 +285,15 @@ nav:hover .nav-toggle {
   z-index: 11;
 }
 .control-bigcircle-1:hover + .bgshape-big {
-  box-shadow: 0 0 45px;
+  box-shadow: 0 0 30px $colorDarkTrans;
   ~ .bgshape-backbig,
   ~ .bgshape-halfcircle-1 {
-    filter: blur(15px);
+    filter: blur(10px);
   }
+}
+
+.hidden {
+  display: none;
 }
 
 @keyframes updown {

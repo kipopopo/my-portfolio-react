@@ -2,10 +2,12 @@ import React from "react";
 import "../styles/main.scss";
 import Logo from "../logo.png";
 import { ReactComponent as Arrow } from "../assets/icons/arrow-cone.svg";
-
-const menuItems = [{ name: "About" }, { name: "Contact" }];
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { introAlwaysTrue, introAlwaysFalse } from "../actions";
 
 function Nav(props) {
+  const dispatch = useDispatch();
   let translateY = `translate(0px, ${props.togglePosition})`;
   let style = {
     transform: translateY,
@@ -38,11 +40,16 @@ function Nav(props) {
           <img src={Logo} alt="logo" />
         </div>
         <ul className="nav-links">
-          {menuItems.map((menuItem) => (
-            <div className="btn-pointer">
-              <li>{menuItem.name}</li>
-            </div>
-          ))}
+          <div className="btn-pointer">
+            <Link to={`/`} onClick={() => dispatch(introAlwaysTrue())}>
+              <li>Home</li>
+            </Link>
+          </div>
+          <div className="btn-pointer">
+            <Link to={`/projects`} onClick={() => dispatch(introAlwaysFalse())}>
+              <li>Projects</li>
+            </Link>
+          </div>
         </ul>
       </nav>
     </div>

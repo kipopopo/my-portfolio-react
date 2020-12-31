@@ -1,123 +1,115 @@
 .intro-text .title > span:after {
   content: "";
-  animation: abomination1 7.5s linear 1;
+  font-size: 5rem;
+  animation: typing-title 7.5s linear 1;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
 }
 
-@keyframes abomination1 {
-  0% {
-    content: "I";
-  }
-  4% {
-    content: "I'";
-  }
-  6% {
-    content: "I'm";
-  }
+@keyframes typing-title {
   10% {
-    content: "I'm D";
+    content: "D";
   }
   12% {
-    content: "I'm Da";
+    content: "Da";
   }
   14% {
-    content: "I'm Dax";
+    content: "Dax";
   }
   16% {
-    content: "I'm Daxx";
+    content: "Daxx";
   }
   23% {
-    content: "I'm Dax";
+    content: "Dax";
   }
   24% {
-    content: "I'm Da";
+    content: "Da";
   }
   25% {
-    content: "I'm D";
+    content: "D";
   }
   26% {
-    content: "I'm ";
+    content: "";
   }
   28% {
-    content: "I'm K";
+    content: "K";
   }
   30% {
-    content: "I'm Ki";
+    content: "Ki";
   }
   32% {
-    content: "I'm Kip";
+    content: "Kip";
   }
   34% {
-    content: "I'm Kipo";
+    content: "Kipo";
   }
   36% {
-    content: "I'm Kipop";
+    content: "Kipop";
   }
   38% {
-    content: "I'm Kipopo";
+    content: "Kipopo";
   }
   40% {
-    content: "I'm Kipopop";
+    content: "Kipopop";
   }
   42% {
-    content: "I'm Kipopopp";
+    content: "Kipopopp";
   }
   44% {
-    content: "I'm Kipopoppo";
+    content: "Kipopoppo";
   }
   45% {
-    content: "I'm Kipopopp";
+    content: "Kipopopp";
   }
   46% {
-    content: "I'm Kipopop";
+    content: "Kipopop";
   }
   52% {
-    content: "I'm Kipopopo";
+    content: "Kipopopo";
   }
   53% {
-    content: "I'm Kipopop";
+    content: "Kipopop";
   }
   54% {
-    content: "I'm Kipopo";
+    content: "Kipopo";
   }
   55% {
-    content: "I'm Kipop";
+    content: "Kipop";
   }
   56% {
-    content: "I'm Kipo";
+    content: "Kipo";
   }
   57% {
-    content: "I'm Kip";
+    content: "Kip";
   }
   58% {
-    content: "I'm Ki";
+    content: "Ki";
   }
   59% {
-    content: "I'm K";
+    content: "K";
   }
   60% {
-    content: "I'm ";
+    content: "";
   }
   62% {
-    content: "I'm T";
+    content: "T";
   }
   64% {
-    content: "I'm Th";
+    content: "Th";
   }
   66% {
-    content: "I'm Tha";
+    content: "Tha";
   }
   68% {
-    content: "I'm Thaq";
+    content: "Thaq";
   }
   70% {
-    content: "I'm Thaqi";
+    content: "Thaqi";
   }
   72% {
-    content: "I'm Thaqif";
+    content: "Thaqif";
   }
   100% {
-    content: "I'm Thaqif.";
+    content: "Thaqif.";
   }
 }
