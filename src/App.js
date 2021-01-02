@@ -50,7 +50,7 @@ function App() {
         <video
           src={bgCircleVideo}
           muted
-          // autoPlay
+          autoPlay
           loop
           style={styleVideoInvert}
         ></video>
