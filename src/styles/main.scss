@@ -40,23 +40,32 @@ nav {
   transition: 0.3s;
   box-shadow: 0 0.25rem $colorLight;
   z-index: 0;
-}
-nav:hover {
-  color: $colorDark;
-  background-color: $colorRadiant;
-  box-shadow: 0 0.5rem $colorLight;
-  opacity: 1;
-  a {
+
+  &:hover {
     color: $colorDark;
+    background-color: $colorRadiant;
+    box-shadow: 0 0.5rem $colorLight;
+    opacity: 1;
+
+    a {
+      color: $colorDark;
+    }
+
+    img {
+      transition: 0.2s;
+      transition-delay: 0.3s;
+      box-shadow: 0.35rem 0.35rem $colorDark;
+    }
+
+    .nav-toggle {
+      background-color: $colorRadiant;
+      .arrow {
+        fill: $colorDark;
+      }
+    }
   }
 }
-nav:hover img {
-  transition: 0.2s;
-}
-nav:hover img {
-  transition-delay: 0.3s;
-  box-shadow: 0.35rem 0.35rem $colorDark;
-}
+
 .nav-toggle {
   position: absolute;
   left: 0vw;
@@ -76,41 +85,39 @@ nav:hover img {
   box-shadow: 0 0.35rem $colorLight;
   transition: 0.3s;
 }
-nav:hover .nav-toggle {
-  background-color: $colorRadiant;
-  .arrow {
-    fill: $colorDark;
-  }
-}
+
 .logo-img img {
   height: 8vh;
 }
+
 .nav-links {
   width: 50%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   list-style: none;
-}
-.nav-links {
   position: relative;
   z-index: 5;
+
   a {
     font-size: 1.25rem;
     color: $colorLight;
     text-decoration: none;
   }
+
+  div {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 5px;
+    padding: 10px;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 0.35rem 0.35rem $colorDark;
+    }
+  }
 }
-.nav-links div {
-  font-weight: bold;
-  text-transform: uppercase;
-  margin: 5px;
-  padding: 10px;
-  transition: box-shadow 0.3s;
-}
-.nav-links div:hover {
-  box-shadow: 0.35rem 0.35rem $colorDark;
-}
+
 .ld-mode {
   justify-content: center;
   align-items: center;
@@ -124,29 +131,35 @@ nav:hover .nav-toggle {
   border: none;
   color: $colorLight;
   font-family: Roobert;
+
+  &:hover {
+    color: $colorDark;
+
+    .text {
+      font-weight: bold;
+    }
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  .icon {
+    margin: 0 auto;
+    width: 2rem;
+    fill: whitesmoke;
+  }
+
+  .text {
+    font-size: 12px;
+    font-weight: 100;
+    background-color: $colorDark;
+    border-radius: 7px;
+    padding: 2px 5px;
+    transition: 0.3s;
+  }
 }
-.ld-mode .icon {
-  margin: 0 auto;
-  width: 2rem;
-  fill: whitesmoke;
-}
-.ld-mode .text {
-  font-size: 12px;
-  font-weight: 100;
-  background-color: $colorDark;
-  border-radius: 7px;
-  padding: 2px 5px;
-  transition: 0.3s;
-}
-.ld-mode:hover {
-  color: $colorDark;
-}
-.ld-mode:hover .text {
-  font-weight: bold;
-}
-.ld-mode:focus {
-  outline: 0;
-}
+
 .main-outer-container {
   transition: 0.3s;
 }
@@ -162,18 +175,23 @@ nav:hover .nav-toggle {
   display: flex;
   justify-content: center;
   margin-top: 5vh;
+
+  .intro-text {
+    .title {
+      font-size: 3rem;
+      margin-bottom: 3vh;
+    }
+
+    .description {
+      line-height: 1.75rem;
+      font-size: 1.15rem;
+    }
+  }
 }
 .intro {
   width: 90vw;
 }
-.main-content .intro-text .title {
-  font-size: 3rem;
-  margin-bottom: 3vh;
-}
-.main-content .intro-text .description {
-  line-height: 1.75rem;
-  font-size: 1.15rem;
-}
+
 .outer-intro-text {
   width: 650px;
   height: 650px;
@@ -230,6 +248,44 @@ nav:hover .nav-toggle {
   }
 }
 
+.projects {
+  width: 90vw;
+
+  .content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+    h3 {
+      font-size: 3rem;
+      margin-bottom: 2.5rem;
+    }
+
+    ul {
+      margin-left: 1.25rem;
+
+      li {
+        width: fit-content;
+        list-style: none;
+        margin-bottom: 0.75rem;
+        padding: 15px;
+        border: 2px solid $colorLight;
+        font-size: 1.5rem;
+        font-weight: 300;
+        transition: box-shadow 0.3s, color 0.3s, background-color 0.3s,
+          border-color 0.3s;
+
+        &:hover {
+          box-shadow: 0.35rem 0.35rem $colorDark;
+        }
+      }
+    }
+  }
+}
+
 .grid-2c {
   height: 80vh;
   display: grid;
@@ -244,25 +300,15 @@ nav:hover .nav-toggle {
 .bg {
   position: absolute;
   transition: background-color 0.3s;
-  z-index: 9;
 }
 .circle {
   border-radius: 50%;
-}
-.bgshape-halfcircle-1 {
-  border-radius: 0 100% 0 0;
-  width: 200px;
-  height: 200px;
-  left: 0vw;
-  bottom: 0vh;
-  transition: border-radius 0.75s, background-color 0.3s, filter 0.5s;
-  animation: updown 3s infinite ease-in-out;
 }
 .bgshape-big {
   width: 650px;
   height: 650px;
   left: 15.5vw;
-  top: 24vh;
+  top: 17vh;
   transition: border-radius 1s, box-shadow 1s, background-color 0.3s,
     transform 0.2s;
 }
@@ -275,26 +321,13 @@ nav:hover .nav-toggle {
   opacity: 0.6;
   transition: border-radius 1s, box-shadow 1s, filter 0.5s;
   animation: updown 3s infinite ease-in-out;
-  z-index: 8;
-}
-.control-bigcircle-1 {
-  clip-path: circle(50%);
-  width: 650px;
-  height: 650px;
-  top: 24vh;
-  margin-left: 15.5vw;
-  z-index: 11;
-}
-.control-bigcircle-1:hover + .bgshape-big {
-  box-shadow: 0 0 30px $colorDarkTrans;
-  ~ .bgshape-backbig,
-  ~ .bgshape-halfcircle-1 {
-    filter: blur(10px);
-  }
 }
 
 .hidden {
   display: none;
+}
+.page {
+  position: absolute;
 }
 
 @keyframes updown {
@@ -309,45 +342,32 @@ nav:hover .nav-toggle {
   }
 }
 
+// CSSTransition (fade)
+.fade-appear .fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 150ms linear;
+}
+.fade-appear-active .fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 150ms linear 150ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 150ms linear;
+}
+
 @media only screen and (max-width: 1365px) {
   .intro-text {
     margin-left: 7.5vw;
   }
-}
-
-.page {
-  position: absolute;
-}
-
-// CSSTransition (fade, fadepoof)
-.fade-appear .fade-enter,
-.fadepoof-appear .fadepoof-enter {
-  opacity: 0;
-  z-index: 1;
-}
-.fade-enter,
-.fadepoof-enter {
-  opacity: 0;
-}
-.fade-enter.fade-enter-active,
-.fadepoof-enter.fadepoof-enter-active {
-  opacity: 1;
-  transition: opacity 150ms linear;
-}
-.fade-appear-active .fade-enter.fade-enter-active,
-.fadepoof-appear-active .fadepoof-enter.fadepoof-enter-active {
-  opacity: 1;
-  transition: opacity 300ms linear 150ms;
-}
-.fade-exit,
-.fadepoof-exit {
-  opacity: 1;
-}
-.fade-exit.fade-exit-active,
-.fadepoof-exit.fadepoof-exit-active {
-  opacity: 0;
-  transition: opacity 150ms linear;
-}
-.fadepoof-exit-done {
-  display: none;
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/main.scss";
-import BgShapes from "./BgShapes";
-import Intro from "./Intro";
+import Home from "./Home";
 import Projects from "./Projects";
 import { ReactComponent as LightIcon } from "../assets/icons/light-mode.svg";
 import { ReactComponent as DarkIcon } from "../assets/icons/dark-mode.svg";
@@ -30,11 +29,6 @@ function MainContent(props) {
 
   return (
     <div className="main-outer-container perspective-container">
-      <BgShapes
-        color={props.bgColor}
-        bgColor={props.color}
-        togglePosition={props.togglePosition}
-      />
       <div className="main-container" style={styleToggleDark}>
         <div className="main-content">
           <Route
@@ -47,14 +41,19 @@ function MainContent(props) {
                 >
                   <Switch location={location}>
                     <Route path="/" exact>
-                      <Intro
+                      <Home
                         color={props.bgColor}
                         bgColor={props.color}
                         toggleDark={props.toggleDark}
+                        togglePosition={props.togglePosition}
                       />
                     </Route>
                     <Route path="/projects">
-                      <Projects />
+                      <Projects
+                        color={props.color}
+                        bgColor={props.bgColor}
+                        toggleDark={props.toggleDark}
+                      />
                     </Route>
                   </Switch>
                 </CSSTransition>
