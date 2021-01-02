@@ -236,6 +236,7 @@ nav:hover .nav-toggle {
   grid-template-columns: 1fr 1fr;
   grid-gap: 25px;
 }
+
 .btn-pointer {
   cursor: pointer;
 }
@@ -312,4 +313,41 @@ nav:hover .nav-toggle {
   .intro-text {
     margin-left: 7.5vw;
   }
+}
+
+.page {
+  position: absolute;
+}
+
+// CSSTransition (fade, fadepoof)
+.fade-appear .fade-enter,
+.fadepoof-appear .fadepoof-enter {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-enter,
+.fadepoof-enter {
+  opacity: 0;
+}
+.fade-enter.fade-enter-active,
+.fadepoof-enter.fadepoof-enter-active {
+  opacity: 1;
+  transition: opacity 150ms linear;
+}
+.fade-appear-active .fade-enter.fade-enter-active,
+.fadepoof-appear-active .fadepoof-enter.fadepoof-enter-active {
+  opacity: 1;
+  transition: opacity 300ms linear 150ms;
+}
+.fade-exit,
+.fadepoof-exit {
+  opacity: 1;
+}
+.fade-exit.fade-exit-active,
+.fadepoof-exit.fadepoof-exit-active {
+  opacity: 0;
+  transition: opacity 150ms linear;
+}
+.fadepoof-exit-done {
+  display: none;
 }

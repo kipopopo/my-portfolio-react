@@ -25,7 +25,7 @@ function Intro(props) {
   };
 
   return (
-    <div className="intro">
+    <div className="intro page">
       <div className="grid-2c">
         <div className="outer-intro-text">
           <div className="intro-text" style={styles}>

@@ -6,6 +6,7 @@ import Projects from "./Projects";
 import { ReactComponent as LightIcon } from "../assets/icons/light-mode.svg";
 import { ReactComponent as DarkIcon } from "../assets/icons/dark-mode.svg";
 import { Switch, Route } from "react-router-dom";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 function MainContent(props) {
   let height;
@@ -36,18 +37,30 @@ function MainContent(props) {
       />
       <div className="main-container" style={styleToggleDark}>
         <div className="main-content">
-          <Switch>
-            <Route path="/" exact>
-              <Intro
-                color={props.bgColor}
-                bgColor={props.color}
-                toggleDark={props.toggleDark}
-              />
-            </Route>
-            <Route path="/projects">
-              <Projects />
-            </Route>
-          </Switch>
+          <Route
+            render={({ location }) => (
+              <TransitionGroup>
+                <CSSTransition
+                  key={location.key}
+                  timeout={300}
+                  classNames="fade"
+                >
+                  <Switch location={location}>
+                    <Route path="/" exact>
+                      <Intro
+                        color={props.bgColor}
+                        bgColor={props.color}
+                        toggleDark={props.toggleDark}
+                      />
+                    </Route>
+                    <Route path="/projects">
+                      <Projects />
+                    </Route>
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroup>
+            )}
+          />
         </div>
         <button className="ld-mode btn-pointer" onClick={props.handleToggle}>
           <div className="icon">

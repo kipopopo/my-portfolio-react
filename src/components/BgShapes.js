@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/main.scss";
 import { useSelector } from "react-redux";
+import { CSSTransition } from "react-transition-group";
 
 function BgShapes(props) {
   const isIntro = useSelector((state) => state.isIntro);
@@ -48,16 +49,18 @@ function BgShapes(props) {
   document.onmousemove = handleMouseMove;
 
   return (
-    <div className={isIntro ? "bgshapes" : "bgshapes hidden"}>
-      <div className="bg control-bigcircle-1" style={styleTogglePos}></div>
-      <div
-        id="sheen"
-        className="bg bgshape-big circle"
-        style={styleColorsTogglePos}
-      ></div>
-      <div className="bg bgshape-backbig circle"></div>
-      <div className="bg bgshape-halfcircle-1" style={styleColors}></div>
-    </div>
+    <CSSTransition in={isIntro} timeout={300} classNames="fadepoof">
+      <div className="bgshapes">
+        <div className="bg control-bigcircle-1" style={styleTogglePos}></div>
+        <div
+          id="sheen"
+          className="bg bgshape-big circle"
+          style={styleColorsTogglePos}
+        ></div>
+        <div className="bg bgshape-backbig circle"></div>
+        <div className="bg bgshape-halfcircle-1" style={styleColors}></div>
+      </div>
+    </CSSTransition>
   );
 }
 export default BgShapes;
