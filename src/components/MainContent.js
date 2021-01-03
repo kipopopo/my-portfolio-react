@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/main.scss";
-import Home from "./Home";
-import Projects from "./Projects";
+import Home from "./MainContentComponents/Home";
+import Projects from "./MainContentComponents/Projects";
 import { ReactComponent as LightIcon } from "../assets/icons/light-mode.svg";
 import { ReactComponent as DarkIcon } from "../assets/icons/dark-mode.svg";
 import { Switch, Route } from "react-router-dom";

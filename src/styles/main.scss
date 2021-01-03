@@ -195,8 +195,9 @@ nav {
 .outer-intro-text {
   width: 650px;
   height: 650px;
-  margin-top: 9vh;
+  margin-top: 12vh;
   margin-left: 10.5vw;
+  padding-bottom: 4vh;
   display: flex;
 }
 .intro-text {
@@ -312,15 +313,26 @@ nav {
   transition: border-radius 1s, box-shadow 1s, background-color 0.3s,
     transform 0.2s;
 }
+.ctrl-blur-circles {
+  width: 650px;
+  height: 650px;
+  position: absolute;
+  clip-path: circle(50%);
+  z-index: 10;
+}
 .bgshape-backbig {
   width: 300px;
   height: 300px;
-  top: 15vh;
-  left: 11vw;
+}
+.bgshape-backsmall {
+  width: 150px;
+  height: 150px;
+}
+.bgshape-backbig,
+.bgshape-backsmall {
   background-color: yellow;
   opacity: 0.6;
   transition: border-radius 1s, box-shadow 1s, filter 0.5s;
-  animation: updown 3s infinite ease-in-out;
 }
 
 .hidden {
@@ -328,18 +340,6 @@ nav {
 }
 .page {
   position: absolute;
-}
-
-@keyframes updown {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(0px, 5px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
 }
 
 // CSSTransition (fade)

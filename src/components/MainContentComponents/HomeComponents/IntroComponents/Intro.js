@@ -1,10 +1,9 @@
 import React from "react";
 import Radium from "radium";
-import "../styles/main.scss";
 import "./introTitle.scss";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { introToggle } from "../actions";
+import { introToggle } from "../../../../actions";
 
 function Intro(props) {
   const dispatch = useDispatch();
@@ -39,6 +38,11 @@ function Intro(props) {
               </p>
             </div>
           </div>
+          <div
+            className="ctrl-blur-circles"
+            onMouseOver={props.handleIsBlur}
+            onMouseOut={props.handleIsBlur}
+          ></div>
         </div>
         <div className="intro-image">
           <div className="outer-btn">
