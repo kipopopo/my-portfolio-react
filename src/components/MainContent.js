@@ -53,6 +53,7 @@ function MainContent(props) {
                         color={props.color}
                         bgColor={props.bgColor}
                         toggleDark={props.toggleDark}
+                        togglePosition={props.togglePosition}
                       />
                     </Route>
                   </Switch>

@@ -5,6 +5,10 @@ $colorLightTrans: #f5f5f550;
 $colorRadiant: #ffff00;
 $colorRadiantTrans: #ffff0050;
 
+h4 {
+  font-size: 1.75rem;
+}
+
 button {
   font-family: Roobert;
 }
@@ -23,7 +27,8 @@ video {
   transition: 0.3s;
 }
 .component-nav {
-  position: relative;
+  position: sticky;
+  top: 0px;
   z-index: 15;
   transition: 0.3s;
 }
@@ -74,8 +79,8 @@ nav {
   font-weight: bold;
   padding-top: 5px;
   margin-left: 1.5vw;
-  width: 2vw;
-  height: 3.5vh;
+  width: 40px;
+  height: 40px;
   fill: $colorLight;
   background-color: $colorDark;
   align-items: center;
@@ -131,6 +136,7 @@ nav {
   border: none;
   color: $colorLight;
   font-family: Roobert;
+  z-index: 15;
 
   &:hover {
     color: $colorDark;
@@ -199,6 +205,7 @@ nav {
   margin-left: 10.5vw;
   padding-bottom: 4vh;
   display: flex;
+  transition: margin-left 0.2s;
 }
 .intro-text {
   display: flex;
@@ -257,16 +264,23 @@ nav {
     margin: 0 auto;
     padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-gap: 20px;
 
     h3 {
       font-size: 3rem;
+      padding-top: 1rem;
       margin-bottom: 2.5rem;
     }
 
     ul {
       margin-left: 1.25rem;
+
+      a {
+        text-decoration: none;
+        display: block;
+        width: fit-content;
+      }
 
       li {
         width: fit-content;
@@ -282,6 +296,32 @@ nav {
         &:hover {
           box-shadow: 0.35rem 0.35rem $colorDark;
         }
+      }
+    }
+
+    .list-items {
+      padding: 0rem 1.25rem 1rem 1rem;
+
+      .simplebar-track.simplebar-vertical {
+        width: 14px;
+      }
+      .simplebar-scrollbar:before {
+        background: linear-gradient(320deg, #f8ff00 0%, #3ad59f 100%);
+        border: 1px solid #11111185;
+        width: 10px;
+      }
+
+      .simplebar-scrollbar.simplebar-visible {
+        transition: transform 0.25s ease-out;
+      }
+
+      .simplebar-scrollbar.simplebar-visible:before {
+        opacity: 1;
+        transition: opacity 0s linear;
+      }
+
+      .simplebar-scrollbar.simplebar-visible.simplebar-hover {
+        transition: none;
       }
     }
   }
@@ -310,7 +350,7 @@ nav {
   height: 650px;
   left: 15.5vw;
   top: 17vh;
-  transition: border-radius 1s, box-shadow 1s, background-color 0.3s,
+  transition: left 0.2s, border-radius 1s, box-shadow 1s, background-color 0.3s,
     transform 0.2s;
 }
 .ctrl-blur-circles {
@@ -366,8 +406,110 @@ nav {
   transition: opacity 150ms linear;
 }
 
-@media only screen and (max-width: 1365px) {
+// CSSTransition (fadedelay-500)
+.fadedelay-500-appear .fadedelay-500-enter {
+  opacity: 0;
+}
+.fadedelay-500-enter {
+  opacity: 0;
+}
+.fadedelay-500-enter.fadedelay-500-enter-active {
+  opacity: 1;
+  transition-delay: 500ms;
+  transition: opacity 500ms linear;
+}
+.fadedelay-500-appear-active .fadedelay-500-enter.fadedelay-500-enter-active {
+  opacity: 1;
+  transition: opacity 500ms linear 250ms;
+}
+
+@media only screen and (max-width: 1440px) {
+  body {
+    overflow-x: hidden;
+  }
+  .outer-intro-text {
+    margin-left: 0;
+  }
+  .bg {
+    left: -10.5vw;
+  }
+  .bgshape-big {
+    left: 4vw;
+  }
+}
+@media only screen and (max-width: 1240px) {
+  .App {
+    height: 101vh !important;
+  }
+  .intro {
+    width: auto;
+  }
+  .grid-2c {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 1170px) {
+  .outer-intro-text {
+    width: 540px;
+    height: 540px;
+  }
+  .bgshape-big {
+    width: 540px;
+    height: 540px;
+  }
+  .intro-text .title > span:after {
+    font-size: 4rem !important;
+  }
+}
+@media only screen and (max-width: 940px) {
+  body {
+    overflow-y: visible;
+    overflow-x: hidden;
+  }
+  .App {
+    height: 155vh !important;
+  }
+  .nav-toggle {
+    width: 35px;
+    height: 35px;
+  }
+  .grid-2c {
+    display: block;
+  }
+  .outer-intro-text {
+    width: 100%;
+    height: 400px;
+  }
   .intro-text {
-    margin-left: 7.5vw;
+    transform: scale(0.9);
+    align-items: unset;
+  }
+  .bgshape-big {
+    width: 550px;
+    height: 550px;
+    top: 7vh;
+  }
+  .ctrl-blur-circles {
+    width: 440px;
+    height: 440px;
+    top: 2vh;
+  }
+  .intro-image {
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 65px !important;
+  }
+  .content {
+    display: block !important;
+  }
+  .list-items {
+    margin: 5rem 1.25rem 2rem 0;
+    padding-left: 0 !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .bgshape-big {
+    width: 440px;
+    height: 440px;
   }
 }
